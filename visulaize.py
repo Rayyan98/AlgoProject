@@ -30,6 +30,6 @@ def generatePoints(n, k):
             lis.append(p)
 
     np.random.shuffle(lis)
-    return np.array(lis)
+    return lis
 
 

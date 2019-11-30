@@ -4,13 +4,15 @@ import numpy as np
 def kmeans(points, K):
     clusters = []
     
-    dim = len(points[0]) # find numbers of features in each points
-    centroids = np.zeros((K, dim)) # nparrays that will contain coordinates of centroid in each row
-    random_points = np.random.sample(points, K)
-    centroids[:,:] = random_points # initialize centroid with random points
+    centroids = np.zeros((K, 2)) # nparrays that will contain coordinates of centroid in each row
+    
+    random_index = np.random.choice(range(len(points)), K)
+    for i in range(len(random_index)):
+        centroids[i, :] = points[random_index[i]]
+        
     change = True  # denotes if any centroid has changed significantly
     iteration = 0
-
+    
     while change and iteration < 20:
         iteration += 1
         clusters=[[] for i in range(K)]
@@ -30,7 +32,8 @@ def kmeans(points, K):
             if ((centroids[i, :] - center) ** 2).sum() > 0.16: # check if centroid has changed significantly
                 change = True
             centroids[i, :] = center
-                    
+
+    clusters = [np.array(i) for i in clusters]
     return clusters
 
 
