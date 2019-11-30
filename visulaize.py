@@ -29,6 +29,7 @@ def generatePoints(n, k):
             p = [np.random.normal(x_mid, sd), np.random.normal(y_mid, sd)]
             lis.append(p)
 
+    np.random.shuffle(lis)
     return np.array(lis)
 
 
