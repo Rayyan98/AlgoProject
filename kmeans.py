@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def cluster(points, K):
+def kmeans(points, K):
     clusters = []
     
     dim = len(points[0]) # find numbers of features in each points
