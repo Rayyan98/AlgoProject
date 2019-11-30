@@ -6,10 +6,10 @@ def kmeans(points, K):
     
     centroids = np.zeros((K, 2)) # nparrays that will contain coordinates of centroid in each row
     
-    random_index = np.random.choice(range(len(points)), K)
+    random_index = np.random.choice(range(len(points)), K, replace = False)
     for i in range(len(random_index)):
         centroids[i, :] = points[random_index[i]]
-        
+
     change = True  # denotes if any centroid has changed significantly
     iteration = 0
     
