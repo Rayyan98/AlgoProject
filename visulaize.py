@@ -13,7 +13,6 @@ def generatePoints(n, k):
     sd = width / 4
     lis = []
 
-    np.random.seed(5)
     sectors = np.random.choice(range(k ** 2), k, replace = False)
 
     for i in sectors:

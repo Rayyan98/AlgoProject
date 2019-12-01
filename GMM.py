@@ -16,7 +16,7 @@ def mixtureModel(points, k):
     for i in range(40):
         probs = []
         for j in range(k):
-            probs.append(multivariate_normal.pdf(points, means[j],cova[j]))
+            probs.append(multivariate_normal.pdf(points, means[j],cova[j], allow_singular = True))
         probs = np.array(probs)
         new = []
         for j in range(k):
