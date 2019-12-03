@@ -27,7 +27,7 @@ def mixtureModel(points, k):
             weights[j] = np.mean(new[j])
     probs = []
     for j in range(k):
-        probs.append(multivariate_normal.pdf(points, means[j],cova[j]))
+        probs.append(multivariate_normal.pdf(points, means[j],cova[j], allow_singular = True))
     probs = np.array(probs)
     pred = np.argmax(probs, axis=0)
     clus = []
