@@ -5,7 +5,8 @@ K means clutering
 Divisive clustering
 Agglomerative Clustering
 Spectral Clustering
-Guassian Mixture Model
+Guassian Mixture Model.
+More in pdf
 
 
 # Credits
