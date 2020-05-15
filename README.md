@@ -8,7 +8,8 @@ Spectral Clustering
 Guassian Mixture Model
 
 
-#Credits
+# Credits
+
 All rights reserved by
 Rayyan ul Haq
 Rizwan Niaz
